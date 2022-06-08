@@ -1,6 +1,6 @@
 ﻿@model TbUsuario
 
-<div class="container-fluid ">
+<div class="container ">
     <div class="row align-items-center">
         <div class="col-sm-6">
             <h3 class="align-self-center p-5" style="font-family: Rockwell; text-align:center;"> Cambia tu contraseña, usuario o correo y guarda los cambios. </h3>
@@ -10,7 +10,7 @@
 
             <div class="form-group col-12 font-weight-bold">
                 <br />
-                <h1 class="col-12" style="text-align: center; font-family: Rockwell;"> Haz tus cambios aqui </h1>
+                <h1 class="col-12" style="text-align: center; font-family: Rockwell;"> Haz tus cambios aquí </h1>
                 <br />
                 <div class="row">
                     <div class="col-1 align-self-center" style="text-align:center;">
@@ -41,7 +41,7 @@
                 <br />
                 <input type="hidden" name="IdUsuario" value="@Model.IdUsuario" />
                 <div class="form-group col-12 text-center align-self-center">
-                    <a class="btn btn-outline-primary mb-2 "  role="button" aria-pressed="true" asp-controller="TbUsuario" asp-action="StatScreen" asp-route-Id="@Model.IdUsuario">Regresar a menu sin cambios</a>
+                    <a class="btn btn-outline-primary mb-2 "  role="button" aria-pressed="true" asp-controller="TbUsuario" asp-action="StatScreen" asp-route-Id="@Model.IdUsuario">Regresar al menú sin cambios</a>
                     <input type="submit" value="Guardar cambios" class="btn btn-outline-primary mb-2" />
                 </div>
             </div>
