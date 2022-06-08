@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\AtascoDeTrafficoWebGL\**" />
+    <Content Remove="wwwroot\AtascoDeTrafficoWebGL\**" />
+    <EmbeddedResource Remove="wwwroot\AtascoDeTrafficoWebGL\**" />
+    <None Remove="wwwroot\AtascoDeTrafficoWebGL\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.data" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.framework.js" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.loader.js" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.wasm" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.16" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.16">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.10" />
+  </ItemGroup>
+
+</Project>

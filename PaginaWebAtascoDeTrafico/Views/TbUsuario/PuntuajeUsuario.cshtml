@@ -1,0 +1,29 @@
+﻿@model List<VistaPuntuajeUsuario>
+@{
+    int id = 0; 
+}
+<div class="container-fluid">
+    <h1 class="display-3" style="font-family: Rockwell; text-align:center"> Mi Puntuaje </h1>
+    <br />
+    <table class="table table-striped  table-responsive-lg table-bordered border-dark" style="text-align:center">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Usuario</th>
+                <th scope="col">Puntuaje</th>
+            </tr>
+        </thead>
+        <tbody class="table-striped">
+
+            @foreach (var puntuaje in Model)
+            {
+                <tr>
+                    <td scope="row" style="text-align:center">@puntuaje.Usuario </td>
+                    <td scope="row" style="text-align:center">@puntuaje.Puntuaje</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+    <a class="btn btn-dark text-center align-self-center btn-lg " style="font-family: Rockwell" role="button" aria-pressed="true" asp-controller="TbUsuario" asp-action="StatScreen" asp-route-Id="@Model[0].IdUsuario">Regresar a menu</a>
+
+</div>

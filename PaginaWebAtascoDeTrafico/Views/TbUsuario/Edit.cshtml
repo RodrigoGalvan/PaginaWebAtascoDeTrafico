@@ -1,0 +1,52 @@
+﻿@model TbUsuario
+
+<div class="container-fluid ">
+    <div class="row align-items-center">
+        <div class="col-sm-6">
+            <h3 class="align-self-center p-5" style="font-family: Rockwell; text-align:center;"> Cambia tu contraseña, usuario o correo y guarda los cambios. </h3>
+        </div>
+
+        <form method="post" class="col-sm-6">
+
+            <div class="form-group col-12 font-weight-bold">
+                <br />
+                <h1 class="col-12" style="text-align: center; font-family: Rockwell;"> Haz tus cambios aqui </h1>
+                <br />
+                <div class="row">
+                    <div class="col-1 align-self-center" style="text-align:center;">
+                        <i for="usuario" class="bi bi-person" style="font-size: 2rem; color: black;"></i>
+                    </div>
+                    <div class="col-11 align-self-center">
+                        <input asp-for="Usuario" name="usuario" class="form-control " type="text" placeholder="Usuario" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-1">
+                        <i for="contrasena" class="bi bi-lock-fill" style="font-size: 2rem; color: black;"></i>
+                    </div>
+                    <div class="col-11">
+                        <input asp-for="Contrasena" name="contrasena" class="form-control" type="password" placeholder="Contraseña" />
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-1 align-self-center" style="text-align:center">
+                        <i for="correo" class="bi bi-envelope" style="font-size: 2rem; color: black;"></i>
+                    </div>
+                    <div class="col-11 align-self-center">
+                        <input asp-for="Correo" name="correo" class="form-control" type="text" placeholder="Correo" />
+                    </div>
+                </div>
+                <br />
+                <input type="hidden" name="IdUsuario" value="@Model.IdUsuario" />
+                <div class="form-group col-12 text-center align-self-center">
+                    <a class="btn btn-outline-primary mb-2 "  role="button" aria-pressed="true" asp-controller="TbUsuario" asp-action="StatScreen" asp-route-Id="@Model.IdUsuario">Regresar a menu sin cambios</a>
+                    <input type="submit" value="Guardar cambios" class="btn btn-outline-primary mb-2" />
+                </div>
+            </div>
+        </form>
+
+
+    </div>
+</div>
