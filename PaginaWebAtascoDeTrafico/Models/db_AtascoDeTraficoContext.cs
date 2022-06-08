@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Extensions.Configuration;
 
 #nullable disable
 
@@ -8,13 +9,16 @@ namespace PaginaWebAtascoDeTrafico.Models
 {
     public partial class db_AtascoDeTraficoContext : DbContext
     {
+        private readonly IConfiguration configuration;
+
         public db_AtascoDeTraficoContext()
         {
         }
 
-        public db_AtascoDeTraficoContext(DbContextOptions<db_AtascoDeTraficoContext> options)
+        public db_AtascoDeTraficoContext(DbContextOptions<db_AtascoDeTraficoContext> options, IConfiguration configuration)
             : base(options)
         {
+            this.configuration = configuration;
         }
 
         public virtual DbSet<TbBitacora> TbBitacoras { get; set; }
@@ -28,7 +32,8 @@ namespace PaginaWebAtascoDeTrafico.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=db_AtascoDeTrafico;User Id=admin;Password=admin;");
+                //optionsBuilder.UseNpgsql("Server=127.0.0.1;Port=5432;Database=db_AtascoDeTrafico;User Id=admin;Password=admin;");
+                optionsBuilder.UseNpgsql(configuration.GetConnectionString("JuegoDb"));
             }
         }
 

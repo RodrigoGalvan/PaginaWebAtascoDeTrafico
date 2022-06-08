@@ -12,10 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.data" />
-    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.framework.js" />
-    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.loader.js" />
-    <None Include="wwwroot\AtascoDeTraficoWebGLFuncional\Build\AtascoDeTraficoWebGLFuncional.wasm" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFinal\Build\AtascoDeTraficoWebGLFinal.data" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFinal\Build\AtascoDeTraficoWebGLFinal.framework.js" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFinal\Build\AtascoDeTraficoWebGLFinal.loader.js" />
+    <None Include="wwwroot\AtascoDeTraficoWebGLFinal\Build\AtascoDeTraficoWebGLFinal.wasm" />
   </ItemGroup>
 
   <ItemGroup>
